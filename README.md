@@ -2,13 +2,27 @@
 
 From basic HTTP server to gateway for kafka.
 
-## Run the server
+## Work
 
-TODO:
+### DONE
 
-- install go: https://golang.org/doc/install
-- compile
-- run
+- [x] launch the http server
+- [x] explore request headers
+- [x] launch kafka
+- [x] create topic, produce/consume messages
+- [x] make the server produces message for each incoming request
+
+### IN PROGRESS
+
+- [ ] explore request content
+- [ ] define a data model to handle the request data
+
+### TODO
+
+- [ ] test on kafka cluster
+- [ ] optimize kafka connectio creation
+- [ ] check error handling
+- [ ] package in docker + docker-compose (?)
 
 ## Launch kafka
 
@@ -16,11 +30,13 @@ TODO:
 
 https://kafka.apache.org/quickstart
 
-### With docker-compose
+### With docker-compose in cluster mode
 
 https://github.com/simplesteph/kafka-stack-docker-compose
 
-## Testing Confluent's Golang Client for Apache KafkaTM
+## Run the server
+
+### Installing Confluent's Golang Client for Apache KafkaTM
 
 From https://github.com/confluentinc/confluent-kafka-go
 
@@ -38,6 +54,23 @@ sudo make install
 ```shell
 go get -u github.com/confluentinc/confluent-kafka-go/kafka
 ```
+
+### Run baby run!
+
+```shell
+cd golang_helloooo
+go build
+./golang_helloooo
+```
+
+### Launch the consumer
+
+```shell
+cd golang_helloooo/cons
+go build
+./cons
+```
+
 ## Query the HTTP server
 
 ```shell
