@@ -52,7 +52,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 	log.Printf("body:")
 
 	// initiate kafka connection
-	p, err := kafka.NewProducer(&kafka.ConfigMap{"bootstrap.servers": "localhost"})
+	p, err := kafka.NewProducer(&kafka.ConfigMap{"bootstrap.servers": "localhost:9092"})
 	if err != nil {
 		panic(err)
 	}

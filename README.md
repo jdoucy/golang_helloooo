@@ -14,6 +14,7 @@ From basic HTTP server to gateway for kafka.
 
 ### IN PROGRESS
 
+- [ ] package in docker + docker-compose (?)
 - [ ] explore request content
 - [ ] define a data model to handle the request data
 
@@ -22,7 +23,6 @@ From basic HTTP server to gateway for kafka.
 - [ ] test on kafka cluster
 - [ ] optimize kafka connectio creation
 - [ ] check error handling
-- [ ] package in docker + docker-compose (?)
 
 ## Launch kafka
 
@@ -33,6 +33,10 @@ https://kafka.apache.org/quickstart
 ### With docker-compose in cluster mode
 
 https://github.com/simplesteph/kafka-stack-docker-compose
+
+```shell
+docker-compose -f zk-single-kafka-single.yml up
+```
 
 ## Run the server
 
